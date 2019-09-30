@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+body {
+  margin: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul{
+  padding-left: 0.5rem;
+}
+ul li{
+  list-style: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+h1{
+  margin: 0;
+}
+button{
+  cursor: pointer;
+}
+html{
+  background: #0d0d0d;
+  margin: 0 !important;
+}
+
+.header-header{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  box-shadow: 1px 5px 15px black;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header-header h1{
+  padding-left: 11rem;
+}
+
+.header-top{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 5px;
+}
+.header-topp.x{
+  background:#ff7465;
+}
+.header-topp.y{
+  background:#509cff;
+}
+.header-topp.z{
+  background:#ffc165;
+}
+.header-topp.zz{
+  background:#65ffa0;
+}
+.header{
+  color: white;
+  width: 52%;
+  margin: 0 auto;
+  min-height: 150px;
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  font-family: 'Poppins', sans-serif;
+}
+
+.circles-container{
+  border: 5px #65ffa0 solid;
+  border-color: #ff7465 #509cff #ffc165 #65ffa0;
+  box-shadow: -10px 15px 15px black ;
+  background: #0d0d0d;
+  width: 50%;
+  height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.circle{
+  background: black;
+  border:none;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+}
+
+button:focus{
+  outline: none;
+}
+
+.red{
+  background: url('./images/red-circle.png');
+  background-size: 100%;
+
+
+}
+.yellow{
+  background: url('./images/yellow-circle.png');
+  background-size: 100%;
+}
+.blue{
+  background: url('./images/blue-circle.png');
+  background-size: 100%;
+
+}
+.green{
+  background: url('./images/green-circle.png');
+  background-size: 100%;
+}
+
+#animate{
+  animation: grow .2s 20 ease-in;
+  transform: scale(1);
+  animation-play-state: paused  ;
+  -webkit-animation: grow .2s 20 ease-in;
+}
+
+@keyframes grow{
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.3);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+.mid-text, .start-button{
+  font-family: 'manjari', sans-serif;
+  font-size: 2.2rem;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  color: white;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  animation: fliptext 1s ease-in;
+  -webkit-animation: fliptext 1s 1 ease-in;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+}
+.start-button{
+  color: white;
+  font-family: 'Big Shoulders Text', cursive;
+  background: transparent;
+  border: 3px white solid;
+  border-width: 2px 2px 5px 5px;
+  cursor: pointer;
+  border-radius: 11px;
+  height: 75px;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: none;
+  -webkit-animation: none;
+  box-shadow: -5px 5px 15px black;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+}
+@keyframes fliptext {
+  from{
+    transform: rotateY(-180deg)  ;
+    -webkit-transform: rotateY(-180deg)  ;
+    -moz-transform: rotateY(-180deg)  ;
+    -ms-transform: rotateY(-180deg)  ;
+    -o-transform: rotateY(-180deg)  ;
+}
+  to{
+    transform: rotateY(0deg)  ;
+    -webkit-transform: rotateY(0deg)  ;
+    -moz-transform: rotateY(0deg)  ;
+    -ms-transform: rotateY(0deg)  ;
+    -o-transform: rotateY(0deg)  ;
+}
+}
+/*header game-playing styles */
+.header.game-playing{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 2rem;
+  width: 50%;
+  margin-bottom: 0.5%;
+}
+.header-level{
+  align-self: end;
+  justify-self: center;
+}
+.header-difficulty{
+  align-self: end;
+  justify-self: center;
+}
+
+#countdown{
+  animation: countdown 3.5s ease-in;
+  -webkit-animation: countdown 3.5s ease-in;
+}
+@keyframes countdown{
+  0%{
+    font-size: 5rem;
+  }
+  50%{
+    font-size: 4rem;
+  }
+  100%{
+    font-size: 3rem;
+  }
+}
+/*header game-playing styles */
+
+/*Modal Styles*/
+
+.modal{
+  background: #0d0d0d;
+  border-radius: 8px;
+  border: 2px #65ffa0 solid;
+  box-shadow: -5px 3px 2px #65ffa0;
+  color: white;
+  height: 250px;
+  width: 300px;
+  position: fixed;
+  left: 50%;
+  top: 32%;
+  margin-left: -150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  z-index: 15;
+}
+select{
+  outline: none;
+  background: none;
+  font-family: 'Manjari', sans-serif;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 1px white solid;
+}
+select option{
+  color: black;
+}
+.modal-header{
+  font-family: 'Manjari', sans-serif;
+  padding: 1rem 0 0 1rem;
+  font-size: 1.3rem;
+}
+.modal-content{
+  text-align: center;
+  font-family: 'Manjari', sans-serif;
+}
+.modal-buttons{
+  display: grid;
+  justify-content: stretch;
+  width: 100%;
+
+}
+.modal button{
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  background: #65ffa0;
+  transition: 0.1s ease-in;
+  -webkit-transition: 0.1s ease-in;
+  -moz-transition: 0.1s ease-in;
+  -ms-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
+}
+
+.modal.after-round.incorrect{
+  box-shadow: -5px 3px 2px #ff4c4c;
+  border-color: #ff4c4c;
+}
+.modal.after-round.incorrect button{
+  background: #ff4c4c;
+}
+/*End Modal Styles*/
