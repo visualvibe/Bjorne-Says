@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 ul{
   padding-left: 0.5rem;
@@ -30,6 +31,8 @@ button{
 html{
   background: #0d0d0d;
   margin: 0 !important;
+  overflow-x: hidden;
+
 }
 
 /*Header styles */
@@ -69,6 +72,7 @@ html{
   font-family: 'Poppins', sans-serif;
   color: white;
   box-shadow: 1px 5px 15px black;
+  font-size: 0.6rem;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -78,19 +82,20 @@ html{
   grid-template-columns: 1fr 5fr;
   width: 80%;
   margin: 0 auto;
+  align-items: center;
 }
 
 a{
   color: white;
   text-decoration: none;
-  margin-right: 1%;
+  margin-right: 1.1%;
   transition: 0.09s ease;
   -webkit-transition: 0.09s ease;
   -moz-transition: 0.09s ease;
   -ms-transition: 0.09s ease;
   -o-transition: 0.09s ease;
   box-sizing: border-box;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.15rem;
 }
 #leaderboards-button.active-link,
 #play-button.active-link{
@@ -331,6 +336,7 @@ select{
 }
 select option{
   color: black;
+  font-weight: bold;
 }
 .modal-header{
   font-family: 'Manjari', sans-serif;
@@ -414,13 +420,25 @@ select option{
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 }
+
+#easy{
+  color: #65ffa0;
+}
+
+#medium{
+  color: #ffc165;
+}
+
+#hard{
+  color: #ff7465;
+}
 /*End Modal Styles*/
 
 /*Leaderboards styles*/
 .leaderboards-container{
   width: 51%;
   margin: 0 auto;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .leaderboards-container h1{
@@ -442,15 +460,41 @@ select option{
   outline: none;
   border: none;
   font-family: 'manjari', sans-serif;
+  box-shadow: 0px -2px 5px black;
 }
 
 .scorelist{
   color: white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: stretch;
+  font-family: 'Poppins', sans-serif;
+}
+.scorelist p{
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
+  box-shadow: 0px 15px 15px black;
+  background: #0a0a0a;
+
+}
+.scorelist div{
+  font-weight: bold;
 }
 
-#easy-button{
-  background: #65ffa0;
+.scorelist-rank, .scorelist-name,
+.scorelist-difficulty, .scorelist-level{
+  justify-self: stretch;
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
 }
+
+
+.scorelist-rank:nth-child(8n+1),
+.scorelist-name:nth-child(8n+2),
+.scorelist-difficulty:nth-child(8n+3),
+.scorelist-level:nth-child(8n+4){
+  background: #0a0a0a;
+}
+
 /*End leaderboard styles*/

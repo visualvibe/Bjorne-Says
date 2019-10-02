@@ -1,5 +1,5 @@
 const proxy = require("http-proxy-middleware");
 
 module.exports = app => {
-  app.use(proxy("/api/**", { target: "http://localhost:5002/" }));
+  app.use(proxy("/apii/**", { target: "http://localhost:5002/" }));
 };

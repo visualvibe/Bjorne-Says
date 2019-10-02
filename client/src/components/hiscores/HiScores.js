@@ -45,16 +45,16 @@ class HiScores extends Component {
     console.log(this.state.activeScores)
     const scoreList = this.state.activeScores.map((score,i) =>(
       <>
-      <div>
+      <div className="scorelist-rank">
         {i+1}
       </div>
-      <div>
+      <div className="scorelist-name">
         {score.name}
       </div>
-      <div>
+      <div className="scorelist-difficulty">
         {score.difficulty}
       </div>
-      <div>
+      <div className="scorelist-level">
         {score.level}
       </div>
       </>
@@ -63,17 +63,20 @@ class HiScores extends Component {
     <div className="leaderboards-container">
       <h1>High Scores Leaderboards</h1>
       
-      <div className="leaderboards-buttons-container">
-      <button id="easy-button" onClick={(e) => {this.handleEasy(e)}}>Easy</button>
-      <button id="medium-button" onClick={(e) => {this.handleMedium(e)}}>Medium</button>
-      <button id="hard-button" onClick={(e) => {this.handleHard(e)}}>Hard</button>
+      <div style={{borderColor: this.state.activeDifficulty === 0 ? '#65ffa0' : this.state.activeDifficulty === 1 ? '#ffc165' : '#ff7465' }} className="leaderboards-buttons-container">
+      <button 
+        style={{background: this.state.activeDifficulty === 0 ? '#65ffa0' : ''}}
+        id="easy-button" 
+        onClick={(e) => {this.handleEasy(e)}}>Easy</button>
+      <button style={{background: this.state.activeDifficulty === 1 ? '#ffc165' : ''}} id="medium-button" onClick={(e) => {this.handleMedium(e)}}>Medium</button>
+      <button style={{background: this.state.activeDifficulty === 2 ? '#ff7465' : ''}} id="hard-button" onClick={(e) => {this.handleHard(e)}}>Hard</button>
       </div>
       <div className="scorelist">
-        <p>Rank</p>
-        <p>Player Name</p>
-        <p>Difficulty</p>
-        <p>Level</p>
-        {scoreList}
+        <p>RANK</p>
+        <p>PLAYER NAME</p>
+        <p>DIFFICULTY</p>
+        <p>LEVEL</p>
+          {scoreList}
       </div>
     </div>
     )

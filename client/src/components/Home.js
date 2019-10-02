@@ -34,6 +34,20 @@ class Home extends Component {
     this.state = initState
   }
 
+  componentDidMount(){
+    this.setState(initState)
+    this.setState({
+      userInput: []
+    })
+  }
+
+  componentWillUnmount(){
+    this.setState(initState)
+    this.setState({
+      userInput: []
+    })
+  }
+
   //Function that handles the start of every game/round
   play = async () =>{
     //Generates a random pattern for each round

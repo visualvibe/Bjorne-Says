@@ -13,7 +13,7 @@ const db = mysql.createPool({
 module.exports = (app) =>{
 
   //Method to add highscore
-  app.post('/api/addhighscore', (req,res ) =>{
+  app.post('/apii/addhighscore', (req,res ) =>{
     var newHiScore = [
       [req.body.name, req.body.level, req.body.difficulty]
     ]
@@ -26,7 +26,7 @@ module.exports = (app) =>{
   })
 
   //Method to get easy highscores
-  app.post('/api/highscores/easy', (req,res ) =>{
+  app.post('/apii/highscores/easy', (req,res ) =>{
 
 
     let sql = "SELECT * FROM users WHERE difficulty = 'Easy' ORDER BY level DESC"
@@ -37,7 +37,7 @@ module.exports = (app) =>{
   })
 
   //Method to get Medium highscores
-  app.post('/api/highscores/medium', (req,res ) =>{
+  app.post('/apii/highscores/medium', (req,res ) =>{
 
 
     let sql = "SELECT * FROM users WHERE difficulty = 'Medium' ORDER BY level DESC "
@@ -48,7 +48,7 @@ module.exports = (app) =>{
   })
 
   //Method to get Hard highscores
-  app.post('/api/highscores/hard', (req,res ) =>{
+  app.post('/apii/highscores/hard', (req,res ) =>{
 
 
     let sql = "SELECT * FROM users WHERE difficulty = 'Hard' ORDER BY level DESC"

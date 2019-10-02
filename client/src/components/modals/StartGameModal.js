@@ -10,9 +10,9 @@ const StartGameModal = ({handleGo, handleDifficulty, difficulty}) =>(
 
       <label>Difficulty: </label>
       <select value={difficulty} onChange={(e) => {handleDifficulty(e)}}>
-        <option value={DIFFICULTY.EASY}>Easy</option>
-        <option value={DIFFICULTY.MEDIUM}>Medium</option>
-        <option value={DIFFICULTY.HARD}>Hard</option>
+        <option id="easy" value={DIFFICULTY.EASY}>Easy</option>
+        <option id="medium" value={DIFFICULTY.MEDIUM}>Medium</option>
+        <option id="hard" value={DIFFICULTY.HARD}>Hard</option>
       </select>
     </div>
     <div className="modal-buttons">

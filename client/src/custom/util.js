@@ -38,11 +38,12 @@ export const randomizePattern = async (activeLevel) =>{
   return randomPattern
 }
 
+//Function to add to high scores
 export const addToHiScores = (name, level, difficulty) =>{
   let dif = difficulty === 1600 ? 'Easy' : difficulty === 800 ? 'Medium' : 'Hard'
   axios({
     method: 'POST', 
-    url:'/api/addhighscore', 
+    url:'/apii/addhighscore', 
     'content-type': 'application/json',
     data: {
       name: name,

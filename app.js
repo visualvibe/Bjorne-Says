@@ -15,7 +15,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 //start controllers
 hiScoresController(app);
 
+// Express will serve up production assets
+app.use('/', express.static(__dirname + '/client/build', { redirect: false }))
 
+  // Express will serve up the front-end index.html file if it doesn't recognize the route
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname + '/client/build/index.html'))
+  );
 
 
 

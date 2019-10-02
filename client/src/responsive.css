@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1450px){
+  .header-mid{
+    width: 100%;
+    grid-template-columns: 2fr 7.5fr;
+    padding-left: 1rem;
+  }
+  .leaderboards-container h1{
+    font-size: 3vw;
+  }
+  .header, .circles-container{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1050px){
+  a{
+    margin-right: 3%;
+  }
+  .header, .circles-container{
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 901px){
+  .leaderboards-container{
+    width: 75%;
+    margin-top: 5%;
+  }
+  .leaderboards-container h1{
+    font-size: 5vw;
+  }
+  .header.game-playing{
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 650px){
+  .header-mid{
+    grid-template-columns: 1fr;
+  }
+  .header, .circles-container{
+    width: 95%;
+  }
+  .header.game-playing{
+    width: 95%;
+  }
+  .user-navbar{
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 500px){
+  a{
+    margin-right: 5%;
+  }
+  .leaderboards-container h1{
+    font-size: 6vw;
+  }
+  .leaderboards-container{
+    margin-top: 5%;
+    width: 95%;
+  }
+  .header.game-playing{
+    width: 95%;
+    font-size: 7vw;
+  }
+  .header-level{
+    justify-self: start;
+  }
+  .header-difficulty{
+    justify-self: end;
+  }
+  .circles-container{
+    height: 480px;
+    margin-bottom: 5%;
+  }
+}
